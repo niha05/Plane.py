@@ -1,0 +1,47 @@
+class Plane:
+    def __init__(self, wings, can_fly):
+        self.wings = wings
+        self.can_fly = can_fly
+
+    def display(self):
+       print(self.wings, self.can_fly)
+class Jet(Plane):
+    def __init__(self, wings, can_fly, color):
+        Plane.__init__(self, wings, can_fly)
+        self.color = color
+
+    def display(self):
+        print("number of wings: ", self.wings)
+        print("can_fly: ", self.can_fly)
+        print("color: ",  self.color)
+
+
+class Passenger(Plane):
+    def __init__(self, wings, can_fly, color):
+        Plane.__init__(self, wings, can_fly)
+        self.color = color
+
+    def display(self):
+        print("number of wings: ", self.wings)
+        print("can_fly: ", self.can_fly)
+        print("color: ", self.color)
+
+
+obj1 = Jet(2, "Yes", "black")
+obj2 = Jet(2, "Yes", "white")
+obj1.display()
+obj2.display()
+obj1 = Passenger(2, "Yes", "Blue")
+obj2 = Passenger(2, "Yes", "Green")
+obj1.display()
+obj2.display()
+
+
+
+
+
+
+
+
+
+
